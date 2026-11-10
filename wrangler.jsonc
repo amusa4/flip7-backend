@@ -1,0 +1,34 @@
+{
+  // Connects this file to the Wrangler autocompletion schema to help prevent typos
+  "$schema": "node_modules/wrangler/config-schema.json",
+  
+  // The name of backend app as it will appear in your Cloudflare dashboard
+  "name": "flip7-backend",
+  
+  // The front door of your project; the main file that intercepts incoming traffic
+  "main": "src/index.ts",
+  
+  // Locks the server runtime features to a specific date so future updates don't break your code
+  "compatibility_date": "2026-01-01",
+  
+  // Links your main Worker to your game session "brains"
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "GAME_ROOMS",   // The variable name you'll use in code to find/create rooms (e.g., env.GAME_ROOMS)
+        "class_name": "GameRoom" // Points directly to the TypeScript class managing the session logic
+      }
+    ]
+  },
+  
+  // The database installation instruction manual
+  "migrations": [
+    {
+      "tag": "v1", // The version tag for this database setup
+      
+      // Tells Cloudflare to provision a brand new, private SQLite database 
+      // automatically for every single GameRoom session brain you create
+      "new_sqlite_classes": ["GameRoom"] 
+    }
+  ]
+}

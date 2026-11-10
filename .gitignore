@@ -1,0 +1,46 @@
+# General
+.DS_Store
+package-lock.json
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.vscode/
+
+# IDE
+.idea
+
+# Local History for Visual Studio Code
+.history/
+
+
+node_modules/
+
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Optional npm cache directory
+.npm
+# General
+.DS_Store
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea
+
+# Env
+.env
+.env*.local
+
