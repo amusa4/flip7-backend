@@ -5,7 +5,7 @@ export const FLIP_7_BONUS_POINTS = 15 as const;
 export const FLIP_7_NUM_OF_CARDS = 7 as const;
 export const PLAYER_STATUS = ['PLAYING', 'STAYED', 'BUSTED'] as const;
 export const GAME_PHASES = ['LOBBY', 'ROUND_ACTIVE', 'ROUND_ENDED', 'GAME_ENDED'] as const;
-
+export const MAX_NUMBER_OF_CARDS = 94;
 export const MAX_TOTAL_POINTS = 200;
 export const NUMBER_CARD_COUNTS = {
   0: 1,
